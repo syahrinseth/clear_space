@@ -1,6 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.login_nav')
 
 @section('content')
+<br><br><br>
 <div class="container">
     <div class="jumbotron">
     <div class="row">

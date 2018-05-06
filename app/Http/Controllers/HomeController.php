@@ -30,7 +30,11 @@ class HomeController extends Controller
 
     public function index()
     {
+        if(Auth::user() == true){
+            return view('home');
+        }else{
 
         return view('welcome');
+        }
     }
 }

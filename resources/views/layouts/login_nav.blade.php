@@ -28,53 +28,32 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
-   
+    <style>
+        body{
+            background-color: #d81954;
+        }
+    </style>
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-shrink" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/">Clear_Space</a>
+        <a class="navbar-brand js-scroll-trigger" href="\">Clear_Space</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        @if(Auth::user() == true)
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/">Donate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="logout">logout</a>
-            </li>
-          </ul>
-        </div>
-        @else
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#donate">Donate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Auction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="register">Register</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login">Login</a>
+            </li>
           </ul>
         </div>
-        @endif
       </div>
     </nav>
 
