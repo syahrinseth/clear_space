@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-
+  
   <head>
 
     <meta charset="utf-8">
@@ -28,7 +28,73 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
-   
+    <style>
+      .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dropdown-devider{
+  height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn-outline-success{
+      color: #d81954;
+    background-color: transparent;
+    background-image: none;
+    border-color: #d81954;
+}
+    </style>
   </head>
 
   <body id="page-top">
@@ -44,11 +110,23 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/">Donate</a>
+              <a class="nav-link js-scroll-trigger" href="/">Request</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="logout">logout</a>
+              <a class="nav-link js-scroll-trigger" href="/">Donate</a>
             </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link" href="#">{{Auth::user()->name}}</a>
+            <div class="dropdown-content">
+              <a class="nav-link" href="#"> Settings</a>
+              <div class="dropdown-devider"></div>
+              <a class="nav-link" href="logout"> logout</a>
+            </div>
+            </li>
+            <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
           </ul>
         </div>
         @else
