@@ -15,6 +15,8 @@ class CreateMasterItemsTable extends Migration
     {
         Schema::create('master_items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('itemName');
+            $table->string('imgName');
             $table->timestamps();
         });
     }
